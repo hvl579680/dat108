@@ -8,6 +8,7 @@
 <!-- Fra https://purecss.io/ -->
 <link rel="stylesheet"
 	href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+	<script src="validering.js" defer></script>
 <title>Påmelding</title>
 </head>
 <body>
@@ -16,37 +17,37 @@
 		<fieldset>
 			<div class="pure-control-group">
 				<label for="fornavn">Fornavn:</label> <input type="text"
-					name="fornavn" value="" required/> 
-					<font color="red">Ugyldig fornavn</font>
+					id="fornavn" name="fornavn" value=""/> 
+					<font id="feilfornavn" color="black">Fyll inn fornavn.</font>
 			</div>
 			<div class="pure-control-group">
 				<label for="etternavn">Etternavn:</label> <input type="text"
-					name="etternavn" value="" required/> 
-					<font color="red">Ugyldig etternavn</font>
+					id="etternavn" name="etternavn" value=""/> 
+					<font id="feiletternavn" color="black">Fyll inn etternavn.</font>
 			</div>
 			<div class="pure-control-group">
 				<label for="mobil">Mobil (8 siffer):</label> <input type="text"
-					name="mobil" value="" required/> 
-					<font color="red">Ugyldig mobil</font>
+					id="mobil" name="mobil" value=""/> 
+					<font id="feilmobil" color="black">Fyll inn mobilnummer.</font>
 			</div>
 			<div class="pure-control-group">
 				<label for="password">Passord:</label> <input type="password"
-					name="passord" value=""/> 
-					<font color="red">Ugyldig passord</font>
+					id="passord" name="passord" value=""/> 
+					<font id="feilpassord" color="black">Fyll inn passord</font>
 			</div>
 			<div class="pure-control-group">
-				<label for="passordRepetert">Passord repetert:</label> <input
-					type="password" name="passordRepetert"
+				<label for="passordto">Passord repetert:</label> <input
+					type="password" id="passordto" name="passordRepetert"
 					value=""/> 
-					<font color="red">Passordene må være like</font>
+					<font id="feilPassordMatch" color="black">Repeter passord.</font>
 			</div>
 			<div class="pure-control-group">
-				<label for="kjonn">Kjønn:</label> <input type="radio" name="kjonn"
+				<label id="kjonn" for="kjonn">Kjønn:</label> <input type="radio" name="kjonn"
 					value="mann"
 					 />mann
 				<input type="radio" name="kjonn" value="kvinne"
 					 />kvinne
-				<font color="red">Du må oppgi kjonn</font>
+				<font id="feilkjonn" color="black">Du må oppgi kjønn</font>
 			</div>
 			<div class="pure-controls">
 				<button id = "opprett" type="submit" class="pure-button pure-button-primary">Meld
@@ -57,7 +58,5 @@
 			</div>
 		</fieldset>
 	</form>
-	<script src="person.js"></script>
-	<script src="validering.js"></script>
 </body>
 </html>

@@ -15,9 +15,9 @@ public class DeltakerEAO {
 		em.persist(d);
 	}
 	
-	public List<Deltaker> finnAlleDeltakere() {
-		List<Deltaker> deltakere = em.createQuery("SELECT d FROM Deltaker d ORDER BY d.fornavn, d.etternavn", Deltaker.class).getResultList();
-		return deltakere;
+	public List<Deltaker> hentDeltakere() {
+		List<Deltaker> listen = em.createQuery("SELECT d FROM Deltaker d").getResultList();
+		return listen;
 	}
 	
 	public boolean finnesMobilnummer(String mobilnummer) {

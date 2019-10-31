@@ -5,7 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(schema="oblig3", name="deltaker")
+@Table(schema="dat108oblig3", name="deltaker")
 public class Deltaker implements Comparable<Deltaker>{
 	@Id
 	private String mobil;
@@ -78,8 +78,4 @@ public class Deltaker implements Comparable<Deltaker>{
 		return (fornavn.compareTo(d2.fornavn) != 0) ? fornavn.compareTo(d2.fornavn) : etternavn.compareTo(d2.etternavn);
 		
 	}
-	
-	
-	
-	
 }

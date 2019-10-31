@@ -164,7 +164,7 @@ public class Hashing {
 	 * 
 	 * @return salt as a byte array
 	 */
-	public byte[] getSalt() {
+	public byte[] generateSalt() {
 		
 		//Always use a SecureRandom generator
 	    SecureRandom sr;
